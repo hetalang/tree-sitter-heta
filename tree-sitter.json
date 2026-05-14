@@ -1,0 +1,30 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "heta",
+      "camelcase": "Heta",
+      "scope": "source.heta",
+      "path": ".",
+      "file-types": [
+        "heta"
+      ],
+      "injection-regex": "^heta$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "Apache-2.0",
+    "description": "Tree-sitter grammar for the Heta modeling language.",
+    "authors": [
+      {
+        "name": "Alexander Stepanov",
+        "email": "stepanov@insysbio.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/insysbio/tree-sitter-heta"
+    }
+  }
+}
+

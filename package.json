@@ -1,0 +1,31 @@
+{
+  "name": "tree-sitter-heta",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for the Heta modeling language.",
+  "main": "bindings/node",
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "parse:sample": "tree-sitter parse examples/syntax_highlight.heta"
+  },
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "heta",
+    "qsp",
+    "systems-biology"
+  ],
+  "license": "Apache-2.0",
+  "tree-sitter": [
+    {
+      "scope": "source.heta",
+      "file-types": [
+        "heta"
+      ]
+    }
+  ],
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.8"
+  }
+}
+
