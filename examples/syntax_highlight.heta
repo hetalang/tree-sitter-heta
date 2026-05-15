@@ -5,6 +5,13 @@ EC50_proe   @Const {units: kcell/L} = 4e8;
 EC50_pros   @Const {units: kcell/L} = 3e7;
 HSC_bm_base @Const {units: kcell/L} = 1428000;
 exp_cd34    @Const {units: UL} = 1; // in vitro experiment
+kbase_pro   @Const {units: 1/h} = .009;
+EC50_pro_cbdca @Const {units: uM} = 1;
+ERY_pl_base @Record {units: kcell} .= 9357798165;
+DoseRate @Const {units: IU*h} = 1;
+AmountTime @Const {units: pmole*h} = 1;
+#importNS;
+expCD34 @TimeSwitcher [expCD34]= 1;
 
 SCF_bm  @Species .= 65;
 SCF_pl  @Species .= 32;

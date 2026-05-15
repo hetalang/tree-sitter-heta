@@ -1404,8 +1404,12 @@
     "unit_fragment": {
       "type": "TOKEN",
       "content": {
-        "type": "PATTERN",
-        "value": "[A-Za-z%][A-Za-z0-9_%]*(?:\\/[A-Za-z0-9_%]+)+"
+        "type": "PREC",
+        "value": 2,
+        "content": {
+          "type": "PATTERN",
+          "value": "(?:[A-Za-z%][A-Za-z0-9_%]*|\\d+)(?:[/*](?:[A-Za-z%][A-Za-z0-9_%]*|\\d+))*"
+        }
       }
     },
     "metadata_raw": {

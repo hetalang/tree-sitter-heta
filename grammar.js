@@ -284,7 +284,7 @@ module.exports = grammar({
 
     file_path: _ => token(/[A-Za-z0-9._/\\-]+/),
 
-    unit_fragment: _ => token(/[A-Za-z%][A-Za-z0-9_%]*(?:\/[A-Za-z0-9_%]+)+/),
+    unit_fragment: _ => token(prec(2, /(?:[A-Za-z%][A-Za-z0-9_%]*|\d+)(?:[/*](?:[A-Za-z%][A-Za-z0-9_%]*|\d+))*/)),
 
     metadata_raw: _ => token(prec(-1, /[^,\]}]+/)),
 
