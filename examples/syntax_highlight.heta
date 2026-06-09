@@ -1,0 +1,8 @@
+EC50_proe   @Const {units: kcell/L} = 4e8;
+SCF_pl_corr @Record {units: pM} := SCF_pl - SCF_pl_base;
+SCF_pl_pg_mL@Record {units: ng/L, output:true} := SCF_pl * Mr_scf / kilo;
+
+namespace one begin
+  include "simple.heta" type heta with {a: aaa, b: 1}
+  V_dif_hsc_mpp_bm {actors: HSC_bm => MPP_bm, units: kcell/h} 'Differentiation rate';
+end

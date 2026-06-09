@@ -10,24 +10,28 @@ SCF_pl_pg_mL@Record {units: ng/L, output:true} := SCF_pl * Mr_scf / kilo;
 
 (source_file
   (statement
-    (index)
-    (class)
+    (index
+      (identifier))
+    (class
+      name: (identifier))
     (metadata
       (pair
         key: (identifier)
-        value: (metadata_expression
+        value: (metadata_value
           (unit_fragment))))
     (assignment
       operator: (assignment_operator)
       value: (math_expression
         (number))))
   (statement
-    (index)
-    (class)
+    (index
+      (identifier))
+    (class
+      name: (identifier))
     (metadata
       (pair
         key: (identifier)
-        value: (metadata_expression
+        value: (metadata_value
           (identifier))))
     (assignment
       operator: (assignment_operator)
@@ -38,16 +42,18 @@ SCF_pl_pg_mL@Record {units: ng/L, output:true} := SCF_pl * Mr_scf / kilo;
           right: (math_expression
             (identifier))))))
   (statement
-    (index)
-    (class)
+    (index
+      (identifier))
+    (class
+      name: (identifier))
     (metadata
       (pair
         key: (identifier)
-        value: (metadata_expression
+        value: (metadata_value
           (unit_fragment)))
       (pair
         key: (identifier)
-        value: (metadata_expression
+        value: (metadata_value
           (boolean))))
     (assignment
       operator: (assignment_operator)
@@ -82,26 +88,30 @@ end
       parameters: (metadata
         (pair
           key: (identifier)
-          value: (metadata_expression
+          value: (metadata_value
             (identifier)))
         (pair
           key: (identifier)
-          value: (metadata_expression
+          value: (metadata_value
             (number)))))
     (statement
-      (index)
+      (index
+        (identifier))
       (metadata
         (pair
           key: (identifier)
-          value: (process_expression
-            (actor_side
-              (identifier))
-            (process_arrow)
-            (actor_side
-              (identifier))))
+          value: (metadata_value
+            (process_expression
+              (actor_side
+                (actor_factor
+                  (identifier)))
+              (process_arrow)
+              (actor_side
+                (actor_factor
+                  (identifier))))))
         (pair
           key: (identifier)
-          value: (metadata_expression
+          value: (metadata_value
             (unit_fragment))))
       (title))))
 

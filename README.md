@@ -2,15 +2,17 @@
 
 Tree-sitter grammar for the Heta modeling language.
 
-This grammar is built for editor support first: syntax highlighting, bracket
-matching, indentation, and navigation. It follows the public Heta syntax and
-the official PEG.js parser structure, while keeping expression parsing practical
-for incremental editing.
+This package is aimed at editor support: syntax highlighting, bracket matching,
+indentation, and structural navigation.
 
-Useful references:
+## Related projects
 
-- https://hetalang.github.io/specifications/syntax.html
-- https://github.com/hetalang/heta-parser/blob/master/src/pegjs/heta.pegjs
+- [heta-parser](https://github.com/hetalang/heta-parser) - reference parser and grammar source
+- [zed-heta](https://github.com/hetalang/zed-heta) - Zed editor support for Heta
+
+## References
+
+- Heta syntax specification: https://hetalang.github.io/specifications/syntax.html
 
 ## Development
 
@@ -19,4 +21,3 @@ npm install
 npm run generate
 npm test
 ```
-
