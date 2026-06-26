@@ -175,7 +175,7 @@ module.exports = grammar({
       seq("(", $.actor_side, ")"),
     ),
 
-    process_arrow: _ => choice("=>", "<=>"),
+    process_arrow: _ => choice("=>", "<=>", "="),
 
     assignment: $ => seq(
       field("operator", $.assignment_operator),
@@ -284,7 +284,7 @@ module.exports = grammar({
 
     file_path: _ => token(/[A-Za-z0-9._/\\-]+/),
 
-    unit_fragment: _ => token(prec(2, /(?:[A-Za-z%][A-Za-z0-9_%]*|\d+)(?:[/*](?:[A-Za-z%][A-Za-z0-9_%]*|\d+))+/)),
+    unit_fragment: _ => token(prec(2, /(?:[A-Za-z%][A-Za-z0-9%]*(?:[/*](?:[A-Za-z%][A-Za-z0-9%]*|\d+))+|\d+(?:\/(?:[A-Za-z%][A-Za-z0-9%]*|\d+))+)/)),
 
     metadata_raw: _ => token(prec(-1, /[^,\]}]+/)),
 

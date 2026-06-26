@@ -115,3 +115,35 @@ end
             (unit_fragment))))
       (title))))
 
+==================
+Actor stoichiometry and unit
+==================
+
+v_pol_O_EC {actors: 4*t_EC = O_EC + 4*Om_EC, units: umole/h};
+
+---
+
+(source_file
+  (statement
+    (index
+      (identifier))
+    (metadata
+      (pair
+        key: (identifier)
+        value: (metadata_value
+          (process_expression
+            (actor_side
+              (actor_factor
+                (number)
+                (identifier)))
+            (process_arrow)
+            (actor_side
+              (actor_factor
+                (identifier))
+              (actor_factor
+                (number)
+                (identifier))))))
+      (pair
+        key: (identifier)
+        value: (metadata_value
+          (unit_fragment))))))
